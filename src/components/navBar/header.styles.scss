@@ -1,0 +1,26 @@
+.header {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+
+    .logo-container{
+      height: 100%;
+      width: 70px;
+      padding: 25px;
+      right: 5%;
+      position: absolute;
+      margin-top: 15px;
+      padding-top: 23px;
+    }
+      .options {
+        position: fixed; /* or absolute */
+        font-size: 25px;
+        font-family: 'Lobster', cursive;
+        left: 45%;
+        margin-bottom: 5px;
+      }  
+}  
+  
+  

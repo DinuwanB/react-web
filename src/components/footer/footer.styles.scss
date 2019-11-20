@@ -1,0 +1,15 @@
+.footer {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .options{
+      width: 14%;
+      height: 25px;
+      align-items: flex-start;
+      flex-direction: column;
+      align-items: center;
+    
+    }
+}
