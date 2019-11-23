@@ -1,14 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import Navbar from 'react-bootstrap/Navbar'
+
+
 import './header.styles.scss';
  
 
 const Header = () => (
-    <div className='header'>
-        <div className='options'> 
-            <h3>PLACES.com</h3>    
-        </div>        
+    <div >
+        <Navbar bg="light" variant="light" className='header'>
+            <Navbar.Brand className='brand-name'>Navbar</Navbar.Brand>
+        </Navbar>
     </div>
     
 )

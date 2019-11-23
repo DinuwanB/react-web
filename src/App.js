@@ -1,13 +1,14 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Switch,Route  } from 'react-router-dom';
 
 import HomePage from './pages/homepage.component';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Header from './components/navBar/nvabar.component';
 import Footer from './components/footer/footer.component';
 
-class App extends React.Component () {
+class App extends React.Component  {
 
   render() {
   return (
