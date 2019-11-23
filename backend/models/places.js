@@ -7,6 +7,8 @@ const TravelPlacesSchema = new Schema({
     imageUrl    : { type: String, required : true},
     description : { type: String, required : true}
     
+}, {
+    timestamps : true,
 });
 
 const TravelSchema = mongoose.model('TravelSchema', TravelPlacesSchema);
