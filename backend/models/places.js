@@ -12,5 +12,4 @@ const TravelPlacesSchema = new Schema({
 });
 
 const TravelSchema = mongoose.model('TravelSchema', TravelPlacesSchema);
-
 module.exports = TravelSchema; 

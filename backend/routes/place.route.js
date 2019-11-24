@@ -8,7 +8,33 @@ Router.get('/', function(req, res){
     .then(newplace => res.json(newplace))
     .catch(err => res.status(400).json('Error : ' + err));
 });
+// CREATE PLACE
+Router.post('/add', function(req,res){
+    const placeName = req.body.placeName;
+    const imageUrl  = req.body.imageUrl;
+    const description = req.body.description;
 
-Router.post('/add', function(res,req){
-    
-})
+    const newPlace = new NewPlace ({
+        placeName,
+        imageUrl,
+        description
+    });
+
+    newPlace.save()
+    .then(() => res.json('New Place Added!'))
+    .catch(err => res.status(400).json('Error: ' +err));
+}); 
+// DELETE PLACE
+Router.get('/:id', function(req,res){
+    NewPlace.findById(req.params.id)
+    .then(newplace => res.json(newplace))
+    .catch(err => res.status(400).json('Error: ' +err))
+}); 
+
+Router.delete('/:id', function(req, res) {
+    NewPlace.findByIdAndDelete(req.params.id)
+    .then(() => res.json('Place Deleted!'))
+    .catch(err => res.status(400).json('Error: ' + err));
+});
+
+module.exports = Router;
