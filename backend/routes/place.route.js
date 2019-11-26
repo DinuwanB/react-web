@@ -36,5 +36,17 @@ Router.delete('/:id', function(req, res) {
     .then(() => res.json('Place Deleted!'))
     .catch(err => res.status(400).json('Error: ' + err));
 });
+//EDIT AND UPDATE
+Router.post('/update/:id', function(req,res){
+    NewPlace.findById(req.params.id)
+    .then( newPlace => {
+        newPlace.placeName = req.body.placeName;
+        newPlace.imageUrl = req.body.imageUrl;
+        newPlace.description = req.body.description;
 
+        newPlace.save()
+        .then(() => res.json('Place Updated!'))
+        .catch(err => res.status(400).json('Error: ' +err));
+    });
+});
 module.exports = Router;
